@@ -46,7 +46,7 @@ export function Stack() {
       {stacks.map((stack, index) => (
         <div key={index} className="flex flex-col items-center">
           <stack.IconComponent
-            className={`hover:fill-[${stack.color}]transition-all duration-200 drop-shadow-lg stack`}
+            className={`hover:fill-[${stack.color}] transition-all duration-200 drop-shadow-lg stack`}
             size={64}
             color={stack.color}
             id="stack"
