@@ -5,14 +5,16 @@ interface BalaoInfo {
 
 export function BalaoConversa(props: BalaoInfo) {
   return (
-    <div className="mt-[74px] z-30 absolute hidden transition-all duration-200 balaoConversa">
+    <div className="mt-[74px] z-30 absolute  transition-all duration-200 balaoConversa">
       <div
-        className={`bg-[#${props.corFundo}] size-[20px] m-auto rotate-45 rounded-e-lg mb-[-12px] relative`}
+        className={`${props.corFundo} size-[20px] m-auto rotate-45 rounded-e-lg mb-[-12px] relative`}
       ></div>
       <div
-        className={`bg-[#000] h-[40px] w-[90px] flex flex-col justify-center rounded-[5px] text-center`}
+        className={`${props.corFundo} h-[40px] w-[100px] flex flex-col justify-center rounded-[5px] text-center shadow-2xl shadow-white`}
       >
-        <p className="text-[1rem] text-white font-medium">{props.titulo}</p>
+        <p className="text-[1rem] text-white font-bold drop-shadow">
+          {props.titulo}
+        </p>
       </div>
     </div>
   );

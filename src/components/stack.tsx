@@ -10,15 +10,18 @@ import { BalaoConversa } from "./balaoConversa";
 
 export function Stack() {
   const css = `
-    .balaoConversa {
-      display: none;
-      opacity: 0; 
-    }
-    
-    .stack:hover + .balaoConversa {
-      display: block;
-      opacity: 1; 
-    }
+  .balaoConversa {
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms; 
+    transform: scale(1.05);
+  }
+  
+  .stack:hover + .balaoConversa {
+    display: block;
+    opacity: 1;
+    transform: scale(1); 
+  }
+  
   `;
 
   return (
@@ -31,7 +34,7 @@ export function Stack() {
           size={64}
           color="#358EF1"
         />
-        <BalaoConversa titulo="Typescript" corFundo="358EF1" />
+        <BalaoConversa titulo="Typescript" corFundo="bg-[#358EF1]" />
       </div>
 
       <div className="flex flex-col items-center">
@@ -40,7 +43,7 @@ export function Stack() {
           size={64}
           color="#F1DD35"
         />
-        <BalaoConversa titulo="Javascript" corFundo="F1DD35" />
+        <BalaoConversa titulo="Javascript" corFundo="bg-[#F1DD35]" />
       </div>
 
       <div className="flex flex-col items-center">
@@ -49,32 +52,41 @@ export function Stack() {
           size={64}
           color="#04D8F9"
         />
-        <BalaoConversa titulo="React" corFundo="04D8F9" />
+        <BalaoConversa titulo="React" corFundo="bg-[#04D8F9]" />
       </div>
 
-      <SiTailwindcss
-        className="hover:fill-[#2383c7] transition-all duration-200 drop-shadow-lg stack"
-        size={64}
-        color="#3490D0"
-        title="Tailwind CSS"
-        id="stack"
-      />
+      <div className="flex flex-col items-center">
+        <SiTailwindcss
+          className="hover:fill-[#2383c7] transition-all duration-200 drop-shadow-lg stack"
+          size={64}
+          color="#3490D0"
+          title="Tailwind CSS"
+          id="stack"
+        />
+        <BalaoConversa titulo="TailwindCSS" corFundo="bg-[#3490D0]" />
+      </div>
 
-      <SiNodedotjs
-        className="hover:fill-[#3C873A] transition-all duration-200 drop-shadow-lg"
-        size={64}
-        color="#68A063"
-        title="Node.js"
-        id="stack"
-      />
+      <div className="flex flex-col items-center">
+        <SiNodedotjs
+          className="hover:fill-[#3C873A] transition-all duration-200 drop-shadow-lg stack"
+          size={64}
+          color="#68A063"
+          title="Node.js"
+          id="stack"
+        />
+        <BalaoConversa titulo="Node.js" corFundo="bg-[#68A063]" />
+      </div>
 
-      <SiGit
-        className="hover:fill-[#b84129] transition-all duration-200 drop-shadow-lg"
-        size={64}
-        color="#df654c"
-        title="GIT"
-        id="stack"
-      />
+      <div className="flex flex-col items-center">
+        <SiGit
+          className="hover:fill-[#b84129] transition-all duration-200 drop-shadow-lg stack"
+          size={64}
+          color="#df654c"
+          title="GIT"
+          id="stack"
+        />
+        <BalaoConversa titulo="GIT" corFundo="bg-[#df654c]" />
+      </div>
     </div>
   );
 }
