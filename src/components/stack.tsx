@@ -17,12 +17,12 @@ interface StackInfo {
 }
 
 const stacks: StackInfo[] = [
-  { IconComponent: SiTypescript, title: "Typescript", color: "#358EF1" },
-  { IconComponent: SiJavascript, title: "Javascript", color: "#F1DD35" },
-  { IconComponent: SiReact, title: "React", color: "#04D8F9" },
-  { IconComponent: SiTailwindcss, title: "TailwindCSS", color: "#3490D0" },
-  { IconComponent: SiNodedotjs, title: "Node.js", color: "#68A063" },
-  { IconComponent: SiGit, title: "GIT", color: "#df654c" },
+  { IconComponent: SiTypescript, title: "Typescript", color: "bg-[#358EF1]" },
+  { IconComponent: SiJavascript, title: "Javascript", color: "bg-[#F1DD35]" },
+  { IconComponent: SiReact, title: "React", color: "bg-[#04D8F9]" },
+  { IconComponent: SiTailwindcss, title: "TailwindCSS", color: "bg-[#3490D0]" },
+  { IconComponent: SiNodedotjs, title: "Node.js", color: "bg-[#68A063]" },
+  { IconComponent: SiGit, title: "GIT", color: "bg-[#df654c]" },
 ];
 
 export function Stack() {
@@ -39,23 +39,19 @@ export function Stack() {
       transform: scale(1); 
     }
   `;
+
   return (
     <div className="flex gap-8 ml-[14px]">
       <style>{css}</style>
 
       {stacks.map((stack, index) => (
-        <div key={index} className="flex flex-col items-center">
+        <div key={index} className="flex items-center">
           <stack.IconComponent
-            className={`hover:fill-[${stack.color}]transition-all duration-200 drop-shadow-lg stack`}
-            size={64}
-            color={stack.color}
+            className={`size-[32px] md:size-[64px] transition-all duration-200 drop-shadow-lg stack`}
+            color={stack.color.substring(4, stack.color.length - 1)}
             id="stack"
           />
-
-          <BalaoConversa
-            titulo={stack.title}
-            corFundo={`bg-[${stack.color}]`}
-          />
+          <BalaoConversa titulo={stack.title} corFundo={stack.color} />
         </div>
       ))}
     </div>
