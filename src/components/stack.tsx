@@ -7,7 +7,7 @@ import {
   SiGit,
 } from "react-icons/si";
 
-import { BalaoConversa } from "./balaoConversa";
+import { SpeechBubble } from "./speechBubble";
 import { IconType } from "react-icons";
 
 interface StackInfo {
@@ -37,21 +37,23 @@ export function Stack() {
       display: block;
       opacity: 1;
       transform: scale(1); 
+      visibility: visible;
     }
   `;
 
   return (
-    <div className="flex gap-8 ml-[14px]">
+    <div className="flex gap-4 md:gap-8 mt-[8px] mr-[50px] sm:mr-[72px] md:mr-0 md:mt-0 md:ml-[14px]">
       <style>{css}</style>
 
       {stacks.map((stack, index) => (
-        <div key={index} className="flex items-center">
+        <div key={index} className="relative flex flex-col items-center">
           <stack.IconComponent
-            className={`size-[32px] md:size-[64px] transition-all duration-200 drop-shadow-lg stack`}
+            className={`size-[32px] sm:size-[64px] transition-all duration-200 drop-shadow-lg stack`}
             color={stack.color.substring(4, stack.color.length - 1)}
             id="stack"
           />
-          <BalaoConversa titulo={stack.title} corFundo={stack.color} />
+
+          <SpeechBubble titulo={stack.title} corFundo={stack.color} />
         </div>
       ))}
     </div>
