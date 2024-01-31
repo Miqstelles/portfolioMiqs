@@ -5,7 +5,7 @@ import { Technologies } from "./technologies";
 
 export function NarutoWeb() {
   return (
-    <div className="flex justify-center w-[95%] h-[80%] md:size-[80%] bg-gradient-to-r from-orange-400 via-orange-300 to-orange-400 rounded-sm drop-shadow-lg hover:shadow-2xl hover:shadow-white transition-all duration-200">
+    <div className="flex justify-center w-[95%] h-[90%] bg-gradient-to-r from-orange-400 via-orange-300 to-orange-400 rounded-sm drop-shadow-lg hover:shadow-2xl hover:shadow-white transition-all duration-200">
       <div className="flex flex-col justify-between m-[32px]">
         <div className="w-full flex justify-between items-center">
           <p className="text-white text-[1.6rem] md:text-[2.75rem] font-extrabold drop-shadow-lg">
