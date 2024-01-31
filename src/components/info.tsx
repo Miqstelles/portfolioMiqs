@@ -34,8 +34,8 @@ const InfoComponentes: Info[] = [
 export function Info() {
   return (
     <>
-      <div className="flex flex-col-reverse items-start sm:mr-[94px] md:mr-0 md:flex-row md:items-end">
-        <h2 className="text-[1.45rem] select-none sm:text-[2rem] lg:text-[2.8rem] xl:text-[3.2rem] mb-[8px] text-left text-white font-extrabold leading-none drop-shadow-lg">
+      <div className="flex flex-col-reverse sm:mr-[94px] md:mr-0 md:flex-row md:items-end">
+        <h2 className="text-[1.40rem] select-none sm:text-[2rem] lg:text-[2.8rem] xl:text-[3.2rem] mb-[8px] text-left text-white font-extrabold leading-none drop-shadow-lg">
           OLÁ, ME CHAMO MIQUÉIAS
         </h2>
 
@@ -53,12 +53,12 @@ export function Info() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center md:items-start">
-        <h1 className="text-justify text-[3.6rem] select-none sm:text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] text-white font-extrabold leading-none drop-shadow-lg">
+      <div className="flex flex-col">
+        <h1 className="text-justify text-[3.4rem] select-none sm:text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] text-white font-extrabold leading-none drop-shadow-lg">
           FULLSTACK
         </h1>
 
-        <h1 className="text-justify text-[3.6rem] select-none sm:text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] text-white font-extrabold leading-none drop-shadow-lg">
+        <h1 className="text-justify text-[3.4rem] select-none sm:text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] text-white font-extrabold leading-none drop-shadow-lg">
           DEVELOPER
         </h1>
 

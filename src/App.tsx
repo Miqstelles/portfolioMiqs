@@ -3,7 +3,7 @@ import { Projects } from "./pages/projects";
 
 function App() {
   return (
-    <div className="w-full">
+    <div>
       <Home />
       <Projects />
     </div>
