@@ -1,12 +1,30 @@
-import { NarutoWeb } from "../components/projects/narutoweb";
+import { Card, Carousel } from "../components/slider";
 
 export function Projects() {
   return (
-    <div className="flex flex-col justify-center items-center w-full h-screen bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500 pb-[50px]">
-      <h1 className="text-white text-[2.65rem] text-center whitespace-nowrap font-extrabold drop-shadow-lg mb-[28px]">
-        MEUS PROJETOS
-      </h1>
-      <NarutoWeb />
+    <div className="projects">
+      {/* <ProjectInfo
+        title="NARUTO WEB"
+        site="https://narutoweb.vercel.app"
+        gitRepo="https://github.com/miqstelles/naruto-web"
+        image={narutoweb}
+        info="Naruto WEB é um site para que os fãs possam encontrar curiosidades e
+        informações sobre seus personagens favoritos."
+      /> */}
+      <Carousel>
+        {[
+          <Card
+            title="Naruto WEB"
+            content="Naruto WEB é um site para que os fãs possam encontrar curiosidades e
+            informações sobre seus personagens favoritos."
+          />,
+          <Card
+            title="Naruto WEB"
+            content="Naruto WEB é um site para que os fãs possam encontrar curiosidades e
+            informações sobre seus personagens favoritos."
+          />,
+        ]}
+      </Carousel>
     </div>
   );
 }
