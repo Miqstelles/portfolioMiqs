@@ -25,22 +25,21 @@ const stacks: StackInfo[] = [
   { IconComponent: SiGit, title: "GIT", color: "bg-[#df654c]" },
 ];
 
-export function Stack() {
-  const css = `
-    .balaoConversa {
-      opacity: 0;
-      transition: opacity 300ms, transform 300ms; 
-      transform: scale(1.05);
-    }
-    
-    .stack:hover + .balaoConversa {
-      display: block;
-      opacity: 1;
-      transform: scale(1); 
-      visibility: visible;
-    }
-  `;
+const css = `
+  .balaoConversa {
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms; 
+    transform: scale(1.05);
+  }
 
+  .stack:hover + .balaoConversa {
+    display: block;
+    opacity: 1;
+    transform: scale(1); 
+  }
+`;
+
+export function Stack() {
   return (
     <div className="flex gap-4 md:gap-8 mt-[8px] mr-[50px] sm:mr-[72px] md:mr-0 md:mt-0 md:ml-[14px]">
       <style>{css}</style>

@@ -1,18 +1,53 @@
+import {
+  SiTypescript,
+  SiJavascript,
+  SiReact,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiGit,
+  SiRedux,
+  SiVercel,
+  SiFramer,
+  SiReactrouter,
+} from "react-icons/si";
+
 import { AiFillGithub } from "react-icons/ai";
 import { LiaExternalLinkAltSolid } from "react-icons/lia";
 import { Technologies } from "./technologies";
+import { ImageSlider } from "../imageSlider";
+
+const stacks = [
+  { IconComponent: SiTypescript, title: "Typescript", color: "bg-[#358EF1]" },
+  { IconComponent: SiJavascript, title: "Javascript", color: "bg-[#F1DD35]" },
+  { IconComponent: SiReact, title: "React", color: "bg-[#04D8F9]" },
+  { IconComponent: SiTailwindcss, title: "TailwindCSS", color: "bg-[#3490D0]" },
+  { IconComponent: SiNodedotjs, title: "Node.js", color: "bg-[#68A063]" },
+  { IconComponent: SiGit, title: "GIT", color: "bg-[#df654c]" },
+  { IconComponent: SiRedux, title: "Redux", color: "bg-[#764ABC]" },
+  { IconComponent: SiVercel, title: "Vercel", color: "bg-[#000000]" },
+  { IconComponent: SiFramer, title: "Framer", color: "bg-[#15abfb]" },
+  {
+    IconComponent: SiReactrouter,
+    title: "React Router DOM",
+    color: "bg-[#e42f0b]",
+  },
+];
 
 interface ProjectInfo {
   title: string;
   site: string;
   gitRepo: string;
-  image: string;
+  image: string[];
   info: string;
+  color: string;
+  stacks: number[];
 }
 
 export function ProjectInfo(props: ProjectInfo) {
   return (
-    <div className="flex justify-center w-[95%] h-[90%] bg-gradient-to-r from-orange-400 via-orange-300 to-orange-400 rounded-sm drop-shadow-lg hover:shadow-2xl hover:shadow-white transition-all duration-200">
+    <div
+      className={`card flex justify-center bg-gradient-to-r ${props.color} rounded-sm drop-shadow-lg hover:shadow-2xl hover:shadow-white transition-all duration-200`}
+    >
       <div className="flex flex-col justify-between m-[32px]">
         <div className="w-full flex justify-between items-center">
           <p className="text-white text-[1.6rem] md:text-[2.75rem] font-extrabold drop-shadow-lg">
@@ -31,17 +66,14 @@ export function ProjectInfo(props: ProjectInfo) {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center">
-          <img
-            src={props.image}
-            className="drop-shadow-lg w-[100%] md:w-[60%]"
-          />
+          <ImageSlider slides={props.image} />
 
           <h1 className="text-white text-[1.5rem] xl:text-[2rem] font-extralight text-center lg:text-left">
             {props.info}
           </h1>
         </div>
 
-        <Technologies />
+        <Technologies stacks={props.stacks.map((index) => stacks[index])} />
       </div>
     </div>
   );

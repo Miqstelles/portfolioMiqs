@@ -3,11 +3,6 @@ import "../style/slider.css";
 import React, { useState, ReactNode, CSSProperties } from "react";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
-interface CardProps {
-  title: string;
-  content: string;
-}
-
 interface CarouselProps {
   children: ReactNode;
 }
@@ -20,15 +15,6 @@ interface CarouselStyle extends CSSProperties {
 }
 
 const MAX_VISIBILITY = 3;
-
-export function Card({ title, content }: CardProps) {
-  return (
-    <div className="card">
-      <h2>{title}</h2>
-      <p>{content}</p>
-    </div>
-  );
-}
 
 export function Carousel({ children }: CarouselProps) {
   const [active, setActive] = useState(2);

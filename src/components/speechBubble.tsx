@@ -5,7 +5,7 @@ interface speechBubbleInfo {
 
 export function SpeechBubble(props: speechBubbleInfo) {
   return (
-    <div className="mt-[38px] sm:mt-[74px] absolute invisible transition-all duration-200 balaoConversa z-[30]">
+    <div className="mt-[38px] sm:mt-[74px] absolute transition-all duration-200 balaoConversa z-[30]">
       <div
         className={`${props.corFundo} size-[15px] sm:size-[20px] m-auto rotate-45 rounded-e-lg mb-[-12px] relative`}
       />
