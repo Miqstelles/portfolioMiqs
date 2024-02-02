@@ -7,7 +7,9 @@ import narutomobile from "../assets/iphone.png";
 export function Projects() {
   return (
     <div className="projects">
-      <h1>MEUS PROJETOS KKk</h1>
+      <h1 className="text-[3rem] text-white font-extrabold mb-6">
+        MEUS PROJETOS
+      </h1>
 
       <Carousel>
         {[
